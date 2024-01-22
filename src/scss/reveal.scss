@@ -1,0 +1,80 @@
+/* Reveal */
+[data-state]:not([data-reveal$="<>"]),
+[data-reveal$="<>"] > [data-state] {
+    will-change: opacity;
+}
+[data-state="off"]:not([data-reveal$="<>"]),
+[data-reveal$="<>"] > *:not([data-state="on"]) {
+    opacity: 0 !important;
+}
+
+
+/* Reveal types */
+[data-reveal="R2L"]
+{
+    &[data-state="off"] {
+        transform: translate3d(4.8rem, 0, 0) !important;
+    }
+    transition: opacity .3s ease-in,
+                transform .4s ease-out;
+    will-change: transform, opacity !important;
+}
+[data-reveal="L2R"]
+{
+    &[data-state="off"] {
+        transform: translate3d(-4.8rem, 0, 0) !important;
+    }
+    transition: opacity .3s ease-in,
+                transform .4s ease-out;
+    will-change: transform, opacity !important;
+}
+[data-reveal="L2R-mask"]
+{
+    &[data-state="off"] {
+        clip-path: polygon(0 0, 0 0, 0 100%, 0 100%) !important;
+    }
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transition: clip-path 1s ease;
+    will-change: clip-path !important;
+}
+[data-reveal="L2R-line"]
+{
+    &[data-state="off"]::after {
+        width: 0% !important;
+    }
+    &::after { transition: width .5s ease-out; }
+}
+[data-reveal="U2D"]
+{
+    &[data-state="off"] {
+        transform: translate3d(0, -2.4rem, 0) !important;
+    }
+    transition: opacity .25s ease-in,
+                transform .35s ease-out;
+    will-change: transform, opacity !important;
+}
+[data-reveal="D2U"]
+{
+    &[data-state="off"] {
+        transform: translate3d(0, 2.4rem, 0) !important;
+    }
+    transition: opacity .25s ease-in,
+                transform .35s ease-out;
+    will-change: transform, opacity !important;
+}
+[data-reveal="card-up"]
+{
+    &[data-state="off"] {
+        transform: translate3d(1.2rem, 4.8rem, 0) rotate(-3deg) !important;
+    }
+    transition: opacity .4s ease-in,
+                transform .5s cubic-bezier(.24,.33,.4,1.37);
+    will-change: transform, opacity !important;
+}
+[data-reveal="hr"]
+{
+    &[data-state="off"] {
+        width: 0% !important;
+    }
+    & { transition: width .5s ease-out; }
+}

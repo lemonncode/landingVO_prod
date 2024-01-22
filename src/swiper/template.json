@@ -1,0 +1,12 @@
+{
+    "slidesPerView": "auto",
+    "spaceBetween": 24,
+    "navigation": {
+        "nextEl": "",
+        "prevEl": ""
+    },
+    "pagination": {
+        "el": "",
+        "clickable": false
+    }
+}

@@ -1,0 +1,182 @@
+@import "../../src/scss/vars";
+@import "../../src/scss/fx";
+#maincontent .c-slider
+{
+    border-radius: 8px;
+    background-color: #F4F4F4;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    .blue
+    {
+        flex: 0 0 560px;
+        .b-back-mask
+        {
+            width: percent(871, $base: 1328);
+            position: absolute;
+            top: 0;
+            left: 0;
+            &, .b-back { height: 100%; }
+            .b-back
+            {
+                width: 100%;
+                border-radius: 0 18px 0 0;
+                object-fit: cover;
+            }
+        }
+        .side
+        {
+            color: white;
+            padding: 50px 0 50px 83px;
+            position: relative;
+            > h2
+            {
+                font-weight: 700;
+                font-size: 40px;
+                line-height: 44px;
+            }
+            > .info-text
+            {
+                margin: 5px 0 32px;
+                p._1
+                {
+                    font-weight: 600;
+                    font-size: 18px;
+                    line-height: 28px;
+                    margin-bottom: 15px;
+                }
+                p._2
+                {
+                    margin-bottom: 12px;
+                    display: flex;
+                    align-items: flex-start;
+                    span { display: block; }
+                    .from
+                    {
+                        font-weight: 600;
+                        font-size: 20px;
+                        line-height: 28px;
+                    }
+                    .price
+                    {
+                        font-weight: 800;
+                        font-size: 42px;
+                        line-height: 37px;
+                        margin-left: 15px;
+                    }
+                }
+                p._3
+                {
+                    font-weight: 400;
+                    font-size: 22px;
+                    line-height: 28px;
+                    span { font-weight: 600; }
+                }
+                p._4
+                {
+                    font-weight: 800;
+                    font-size: 22px;
+                    line-height: 28px;
+                }
+            }
+        }
+    }
+    .gray
+    {
+        flex: 1 2 736px;
+        position: relative;
+        img
+        {
+            width: auto;
+            height: 100%;
+            max-width: 736px;
+            position: absolute;
+            left: 32px;
+            bottom: 0;
+            object-fit: contain;
+            pointer-events: none;
+            @media (max-width: 1300px) {
+                left: -15px;
+            }
+        }
+    }
+
+    // not show for now
+    .s-points
+    {
+        li {
+            display: flex;
+            align-items: center;
+        }
+    
+        li > ul {
+            padding: 0px 20px;
+        }
+    }
+
+    @media (max-width: $bp)
+    {
+        border-radius: 0;
+        margin: 0 -11px;
+        display: block;
+        .blue
+        {
+            background-color: rgba(#133599, 0.9);
+            backdrop-filter: blur(30px);
+            .b-back { display: none; }
+            .side
+            {
+                text-align: center;
+                padding: 23px 20px 50px;
+                > h2
+                {
+                    font-size: 21px;
+                    line-height: 27px;
+                    br { display: none; }
+                }
+                > .info-text
+                {
+                    margin: 4px 0 22px;
+                    p._1
+                    {
+                        font-size: 13px;
+                        line-height: 17px;
+                        margin-bottom: 10px;
+                    }
+                    p._2
+                    {
+                        margin-bottom: 10px;
+                        justify-content: center;
+                        .from
+                        {
+                            font-size: 13px;
+                            line-height: 19px;
+                        }
+                        .price
+                        {
+                            font-size: 28px;
+                            line-height: 19px;
+                            margin-left: 9px;
+                        }
+                    }
+                    p._3, p._4
+                    {
+                        font-size: 13px;
+                        line-height: 19px;
+                    }
+                }
+            }
+        }
+        .gray
+        {
+            height: 184px;
+            img
+            {
+                height: 225px;
+                left: 61%;
+                bottom: 0;
+                transform: translateX(-50%);
+            }
+        }
+    }
+}

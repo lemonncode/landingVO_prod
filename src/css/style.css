@@ -1,0 +1,284 @@
+#maincontent {
+  overflow: hidden;
+}
+#maincontent #slider {
+  margin-top: 17px;
+}
+#maincontent #show_vehicles > .title {
+  margin: 35px 0 40px;
+}
+#maincontent #show_vehicles > .title > h2 {
+  font-weight: 700;
+  font-size: 35px;
+  text-align: center;
+  line-height: normal;
+}
+#maincontent #show_vehicles .container-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  -moz-column-gap: 21px;
+       column-gap: 21px;
+  row-gap: 92px;
+}
+#maincontent #show_vehicles .container-grid > div {
+  border-radius: 8px;
+  background-color: #F0F1F4;
+  border: 0.5px solid #D9DBE4;
+  position: relative;
+}
+#maincontent #show_vehicles .container-grid > div.car {
+  min-height: 283px;
+}
+#maincontent #show_vehicles .container-grid > div.car.L .info h4 {
+  max-width: 328px;
+}
+#maincontent #show_vehicles .container-grid > div.car.R .info h4 {
+  max-width: 239px;
+}
+#maincontent #show_vehicles .container-grid > div.car .info {
+  height: 100%;
+  padding: 36px 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+#maincontent #show_vehicles .container-grid > div.car .info h4 {
+  margin: 14px 0 0;
+}
+#maincontent #show_vehicles .container-grid > div.car .pict {
+  width: 67.3374613003%;
+  position: absolute;
+  bottom: -60px;
+  right: -30px;
+}
+#maincontent #show_vehicles .container-grid > div.bikes {
+  padding: 0 19px 0 42px;
+  grid-column: span 2;
+  display: flex;
+  justify-content: space-between;
+  gap: 13px;
+}
+#maincontent #show_vehicles .container-grid > div.bikes .info {
+  flex: 0 1 603px;
+  padding: 42px 0 48px;
+}
+#maincontent #show_vehicles .container-grid > div.bikes .info h4 {
+  margin: 14px 0 29px;
+}
+#maincontent #show_vehicles .container-grid > div.bikes .pict {
+  flex: 0 1 630px;
+  position: relative;
+}
+#maincontent #show_vehicles .container-grid > div.bikes .pict > .inner {
+  width: 100%;
+  position: absolute;
+  top: 2px;
+  left: 0;
+  bottom: -52px;
+  display: flex;
+}
+#maincontent #show_vehicles .container-grid > div.bikes .pict > .inner > div {
+  display: flex;
+  align-items: center;
+}
+#maincontent #show_vehicles .container-grid > div.bikes .pict > .inner > div.L {
+  flex: 1 1 49.5238095238%;
+}
+#maincontent #show_vehicles .container-grid > div.bikes .pict > .inner > div.R {
+  flex: 1 1 54.126984127%;
+  margin-left: -3.6507936508%;
+}
+#maincontent #show_vehicles .container-grid > div.bikes .pict > .inner > div img {
+  width: 100%;
+  height: auto;
+}
+#maincontent #show_vehicles .container-grid > div h3 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 37px;
+}
+#maincontent #show_vehicles .container-grid > div h4 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 26px;
+}
+#maincontent #show_vehicles .container-grid > div .pict, #maincontent #show_vehicles .container-grid > div img {
+  pointer-events: none;
+}
+@media (max-width: 1200px) {
+  #maincontent #show_vehicles .container-grid {
+    row-gap: 32px;
+  }
+  #maincontent #show_vehicles .container-grid > div.car .pict {
+    width: 59%;
+    bottom: -9px;
+    right: -35px;
+  }
+  #maincontent #show_vehicles .container-grid > div.bikes .pict .inner {
+    top: 0;
+    bottom: 0;
+  }
+}
+@media (max-width: 1024px) {
+  #maincontent #show_vehicles > .title {
+    max-width: 240px;
+    margin: 30px auto 22px;
+  }
+  #maincontent #show_vehicles > .title > h2 {
+    font-size: 20px;
+  }
+  #maincontent #show_vehicles .container-grid {
+    display: block;
+  }
+  #maincontent #show_vehicles .container-grid > div {
+    padding: 20px 20px 22px 26px !important;
+  }
+  #maincontent #show_vehicles .container-grid > div + div {
+    margin-top: 36px;
+  }
+  #maincontent #show_vehicles .container-grid > div.car {
+    min-height: 0;
+  }
+  #maincontent #show_vehicles .container-grid > div.car.L .info h4 {
+    max-width: 202px;
+  }
+  #maincontent #show_vehicles .container-grid > div.car.L .pict {
+    width: 54.2613636364%;
+  }
+  #maincontent #show_vehicles .container-grid > div.car.R .info h4 {
+    max-width: 202px;
+  }
+  #maincontent #show_vehicles .container-grid > div.car.R .pict {
+    width: 49.7159090909%;
+  }
+  #maincontent #show_vehicles .container-grid > div.car .info {
+    height: auto;
+    padding: 0;
+    display: block;
+  }
+  #maincontent #show_vehicles .container-grid > div.car .pict {
+    right: 0;
+    bottom: -16px;
+  }
+  #maincontent #show_vehicles .container-grid > div.bikes {
+    display: block;
+  }
+  #maincontent #show_vehicles .container-grid > div.bikes .info {
+    padding: 0;
+  }
+  #maincontent #show_vehicles .container-grid > div.bikes .info h4 {
+    max-width: 176px;
+    margin-bottom: 15px !important;
+  }
+  #maincontent #show_vehicles .container-grid > div.bikes .pict {
+    width: 45.4545454545%;
+    position: absolute;
+    right: 13px;
+    bottom: -19px;
+  }
+  #maincontent #show_vehicles .container-grid > div.bikes .pict > .inner {
+    position: static;
+    display: block;
+  }
+  #maincontent #show_vehicles .container-grid > div.bikes .pict > .inner > div {
+    display: block;
+  }
+  #maincontent #show_vehicles .container-grid > div.bikes .pict > .inner > div.L {
+    display: none;
+  }
+  #maincontent #show_vehicles .container-grid > div.bikes .pict > .inner > div.R {
+    margin-left: 0;
+  }
+  #maincontent #show_vehicles .container-grid > div h3 {
+    font-size: 18px;
+    line-height: 20px;
+  }
+  #maincontent #show_vehicles .container-grid > div h4 {
+    font-size: 12px;
+    line-height: normal;
+    margin: 8px 0 22px !important;
+  }
+}
+#maincontent #benefits > .container {
+  background-color: #f4fffb;
+  padding: 52px 80px 62px;
+  margin-top: 94px;
+}
+#maincontent #benefits > .container .head-title {
+  max-width: 728px;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: normal;
+  text-align: center;
+  margin: 0 auto 40px;
+}
+@media (max-width: 1024px) {
+  #maincontent #benefits > .container {
+    padding: 43px 22px;
+    margin-top: 57px;
+  }
+  #maincontent #benefits > .container .head-title {
+    max-width: 308px;
+    font-size: 20px;
+    margin: 0 auto 37px;
+  }
+}
+#maincontent #renting {
+  margin-top: 54px;
+}
+#maincontent #ocasion {
+  margin-top: 78px;
+}
+#maincontent #motos {
+  background-color: #F7F8FA;
+  padding: 65px 0 51px;
+  margin-top: 83px;
+}
+#maincontent #motos .c-banner > .inner,
+#maincontent #motos .c-logos .logos-slide .card-logo {
+  background-color: white;
+}
+#maincontent .c-hr {
+  display: none;
+}
+#maincontent #legal {
+  font-size: 14px;
+  line-height: 20px;
+  padding: 48px 74px 34px;
+}
+#maincontent #legal a {
+  color: #133599;
+  font-weight: 600;
+  text-decoration: underline;
+}
+@media (max-width: 1024px) {
+  #maincontent #legal {
+    font-size: 11px;
+    line-height: normal;
+    padding: 34px 14px 52px;
+  }
+}
+@media (max-width: 1024px) {
+  #maincontent #slider {
+    margin-top: 0;
+  }
+  #maincontent #renting {
+    margin-top: 58px;
+  }
+  #maincontent #ocasion {
+    margin-top: 42px;
+  }
+  #maincontent #motos {
+    padding: 38px 0;
+    margin-top: 38px;
+  }
+  #maincontent .c-hr {
+    margin: 32px 0 42px;
+    display: block;
+  }
+  #maincontent .c-hr div {
+    height: 1px;
+    background-color: #D9DBE4;
+  }
+}

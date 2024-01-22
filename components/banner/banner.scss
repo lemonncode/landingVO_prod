@@ -1,0 +1,109 @@
+@import "../../src/scss/vars";
+#maincontent .c-banner
+{
+    &.is-inverted > .inner .left { order: 1; }
+    > h2.title
+    {
+        font-weight: 700;
+        font-size: 35px;
+        line-height: normal;
+        text-align: center;
+        margin: 0 0 40px;
+        br { display: none; }
+    }
+    > .inner
+    {
+        border-radius: 8px;
+        background-color: #f7f8fa;
+        display: flex;
+        overflow: hidden;
+        .left
+        {
+            flex: 0 1 666px;
+            padding: 49px 64px 43px 74px;
+            h2.title
+            {
+                font-weight: 700;
+                font-size: 26px;
+                line-height: 36px;
+                margin-bottom: 31px
+            }
+            > .line
+            {
+                max-width: 510px;
+                color: #333333;
+                font-size: 20px;
+                line-height: normal;
+                display: flex;
+                align-items: center;
+                & + .line { margin-top: 22px; }
+                img
+                {
+                    width: 24px;
+                    height: 24px;
+                    margin-right: 5px;
+                }
+                p { font-weight: 500; }
+            }
+            a.a-cta { margin-top: 40px; }
+        }
+        .right
+        {
+            flex: 1 2 646px;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+            img
+            {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+                &._M { display: none; }
+            }
+        }
+    }
+    @media (max-width: $bp)
+    {
+        > h2.title
+        {
+            max-width: 324px;
+            font-size: 20px;
+            margin: 0 auto 30px;
+            br { display: inline; }
+        }
+        > .inner
+        {
+            flex-direction: column;
+            .left
+            {
+                order: 1;
+                flex: 0 0 auto;
+                text-align: center;
+                padding: 24px 11px 36px;
+                h2.title
+                {
+                    font-size: 18px;
+                    line-height: normal;
+                    margin-bottom: 17px;
+                }
+                > .line
+                {
+                    font-size: 16px;
+                    text-align: left;
+                    & + .line { margin-top: 20px; }
+                }
+                a.a-cta { margin-top: 30px; }
+            }
+            .right
+            {
+                flex: 0 0 162px;
+                border-radius: 0;
+                img._D { display: none; }
+                img._M { display: block; }
+            }
+        }
+    }
+}

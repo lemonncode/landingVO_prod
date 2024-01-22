@@ -1,0 +1,6 @@
+@function percent($measure, $include_symbol: true, $base: 1440)
+{
+    $value: #{$measure / $base * 100};
+    @if ($include_symbol) { @return $value + "%"; }
+    @else { @return $value; }
+}

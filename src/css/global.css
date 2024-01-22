@@ -1,0 +1,72 @@
+main {
+  max-width: 1440px;
+  font-family: "Montserrat";
+  background-color: white;
+  margin: 0 auto;
+}
+main h1, main h2, main h3, main h4, main h5, main h6, main p, main a, main a:hover, main ul, main li {
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  text-decoration: none;
+  font-weight: 400;
+  margin: 0;
+}
+main b {
+  font-weight: 700;
+}
+main sup {
+  font-size: 60%;
+  line-height: 0;
+  vertical-align: super;
+  position: relative;
+  top: 1px;
+}
+main img {
+  max-width: 100%;
+  display: block;
+}
+main ul {
+  list-style-type: disc;
+}
+main a.a-cta {
+  background-color: #133599;
+  border-radius: 8px;
+  color: white;
+  padding: 12px 28px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 19px;
+  display: inline-block;
+  text-transform: uppercase;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+main a.a-cta:hover {
+  color: #133599;
+  background-color: #1af5b1;
+}
+main .boxed {
+  padding-left: 56px;
+  padding-right: 56px;
+}
+main .boxed-full {
+  padding: 56px;
+}
+@media (max-width: 1024px) {
+  main {
+    max-width: 542px;
+  }
+  main a.a-cta {
+    font-size: 10px;
+    line-height: 10px;
+    padding: 10px 14px;
+    border-radius: 6px;
+  }
+  main .boxed {
+    padding-left: 11px;
+    padding-right: 11px;
+  }
+  main .boxed-full {
+    padding: 11px;
+  }
+}

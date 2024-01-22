@@ -1,0 +1,113 @@
+#maincontent .c-banner.is-inverted > .inner .left {
+  order: 1;
+}
+#maincontent .c-banner > h2.title {
+  font-weight: 700;
+  font-size: 35px;
+  line-height: normal;
+  text-align: center;
+  margin: 0 0 40px;
+}
+#maincontent .c-banner > h2.title br {
+  display: none;
+}
+#maincontent .c-banner > .inner {
+  border-radius: 8px;
+  background-color: #f7f8fa;
+  display: flex;
+  overflow: hidden;
+}
+#maincontent .c-banner > .inner .left {
+  flex: 0 1 666px;
+  padding: 49px 64px 43px 74px;
+}
+#maincontent .c-banner > .inner .left h2.title {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 36px;
+  margin-bottom: 31px;
+}
+#maincontent .c-banner > .inner .left > .line {
+  max-width: 510px;
+  color: #333333;
+  font-size: 20px;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+}
+#maincontent .c-banner > .inner .left > .line + .line {
+  margin-top: 22px;
+}
+#maincontent .c-banner > .inner .left > .line img {
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+}
+#maincontent .c-banner > .inner .left > .line p {
+  font-weight: 500;
+}
+#maincontent .c-banner > .inner .left a.a-cta {
+  margin-top: 40px;
+}
+#maincontent .c-banner > .inner .right {
+  flex: 1 2 646px;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+#maincontent .c-banner > .inner .right img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#maincontent .c-banner > .inner .right img._M {
+  display: none;
+}
+@media (max-width: 1024px) {
+  #maincontent .c-banner > h2.title {
+    max-width: 324px;
+    font-size: 20px;
+    margin: 0 auto 30px;
+  }
+  #maincontent .c-banner > h2.title br {
+    display: inline;
+  }
+  #maincontent .c-banner > .inner {
+    flex-direction: column;
+  }
+  #maincontent .c-banner > .inner .left {
+    order: 1;
+    flex: 0 0 auto;
+    text-align: center;
+    padding: 24px 11px 36px;
+  }
+  #maincontent .c-banner > .inner .left h2.title {
+    font-size: 18px;
+    line-height: normal;
+    margin-bottom: 17px;
+  }
+  #maincontent .c-banner > .inner .left > .line {
+    font-size: 16px;
+    text-align: left;
+  }
+  #maincontent .c-banner > .inner .left > .line + .line {
+    margin-top: 20px;
+  }
+  #maincontent .c-banner > .inner .left a.a-cta {
+    margin-top: 30px;
+  }
+  #maincontent .c-banner > .inner .right {
+    flex: 0 0 162px;
+    border-radius: 0;
+  }
+  #maincontent .c-banner > .inner .right img._D {
+    display: none;
+  }
+  #maincontent .c-banner > .inner .right img._M {
+    display: block;
+  }
+}

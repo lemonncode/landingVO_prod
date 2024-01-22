@@ -1,0 +1,23 @@
+#maincontent .b-cta {
+  background-color: #1af5b1;
+  border-radius: 8px;
+  color: #133599;
+  padding: 12px 30px;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 19px;
+  display: inline-block;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+#maincontent .b-cta:hover {
+  background-color: #f2f2f3;
+}
+@media (max-width: 1024px) {
+  #maincontent .b-cta {
+    font-size: 10px;
+    line-height: 10px;
+    border-radius: 6px;
+    padding: 10px 14px;
+  }
+}

@@ -1,0 +1,108 @@
+@import "../../src/scss/vars";
+#maincontent
+{
+    .c-logos-title
+    {
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 25px;
+        text-align: center;
+        margin: 46px 0 40px;
+        @media (max-width: $bp)
+        {
+            max-width: 234px;
+            font-size: 18px;
+            line-height: normal;
+            margin: 46px auto 30px;
+        }
+    }
+
+    .c-logos
+    {
+        @keyframes slide
+        {
+            from { transform: translateX(0); }
+            to { transform: translateX(-100%); }
+        }
+        white-space: nowrap;
+        position: relative;
+        display: flex;
+        gap: 10px;
+        overflow: hidden;
+        .logos-slide
+        {
+            display: flex;
+            gap: 10px;
+            width: 300%;
+            animation: 35s slide infinite linear;
+            .card-logo
+            {
+                height: 153px;
+                width: 191px;
+                background-color: #f7f8fa;
+                border-radius: 10px;
+                display: flex;
+                padding: 18px;
+                img {
+                    margin: 24px auto;
+                    object-fit: contain;
+                }
+            }
+        }
+        @media (max-width: $bp)
+        {
+            .logos-slide .card-logo
+            {
+                height: 98px;
+                width: 122px;
+                display: flex;
+                img
+                {
+                    height: 45px;
+                    margin: auto;
+                }
+            }
+        }
+    }
+}
+
+
+// for now lets not use it
+/*     .logos:before,
+    .logos:after {
+        position: absolute;
+        top: 0;
+        width: 120px;
+        height: 100%;
+
+        content: "";
+        z-index: 2;
+    }
+
+    .logos:before {
+        left: 0;
+        background: linear-gradient(to left,
+                rgba(255, 255, 255, 0),
+                rgb(255, 255, 255));
+    }
+
+    .logos:after {
+        right: 0;
+        background: linear-gradient(to right,
+                rgba(255, 255, 255, 0),
+                rgb(255, 255, 255));
+    }
+    
+
+    // mobile:
+    .logos:before,
+    .logos:after {
+        position: absolute;
+        top: 0;
+        width: 60px;
+        height: 100%;
+
+        content: "";
+        z-index: 2;
+    }
+    */

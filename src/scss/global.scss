@@ -1,0 +1,79 @@
+@import "vars";
+main
+{    
+    max-width: 1440px;
+    font-family: 'Montserrat';
+    background-color: white;
+    margin: 0 auto;
+    h1, h2, h3, h4, h5, h6, p, a, a:hover, ul, li
+    {
+        color: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        text-decoration: none;
+        font-weight: 400;
+        margin: 0;
+    }
+    b { font-weight: 700; }
+    sup
+    {
+        font-size: 60%;
+        line-height: 0;
+        vertical-align: super;
+        position: relative;
+        top: 1px;
+    }
+    img
+    {
+        max-width: 100%;
+        display: block;
+    }
+    ul { list-style-type: disc; }
+    a.a-cta
+    {
+        background-color: #133599;
+        border-radius: 8px;
+        color: white;
+        padding: 12px 28px;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 19px;
+        display: inline-block;
+        text-transform: uppercase;
+        transition: color 0.3s ease,
+                    background-color 0.3s ease;
+        &:hover
+        {
+            color: #133599;
+            background-color: #1af5b1;
+        }
+    }
+    
+    $padding: 56px;
+    .boxed
+    {
+        padding-left: $padding;
+        padding-right: $padding;
+    }
+    .boxed-full { padding: $padding; }
+    
+    @media (max-width: $bp)
+    {
+        max-width: 542px;
+        a.a-cta
+        {
+            font-size: 10px;
+            line-height: 10px;
+            padding: 10px 14px;
+            border-radius: 6px;
+        }
+
+        $padding: 11px;
+        .boxed
+        {
+            padding-left: $padding;
+            padding-right: $padding;
+        }
+        .boxed-full { padding: $padding; }
+    }
+}

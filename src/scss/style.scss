@@ -1,0 +1,299 @@
+@import "vars";
+@import "fx";
+#maincontent
+{
+    overflow: hidden;
+
+    #slider { margin-top: 17px; }
+
+    #show_vehicles
+    {
+        > .title
+        {
+            margin: 35px 0 40px;
+            > h2
+            {
+                font-weight: 700;
+                font-size: 35px;
+                text-align: center;
+                line-height: normal;
+            }
+        }
+        .container-grid
+        {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 21px;
+            row-gap: 92px;
+            > div
+            {
+                border-radius: 8px;
+                background-color: #F0F1F4;
+                border: 0.5px solid #D9DBE4;
+                position: relative;
+                &.car
+                {
+                    min-height: 283px;
+                    &.L .info h4 { max-width: 328px; }
+                    &.R .info h4 { max-width: 239px; }
+                    .info
+                    {
+                        height: 100%;
+                        padding: 36px 48px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        justify-content: space-between;
+                        h4 { margin: 14px 0 0; }
+                    }
+                    .pict
+                    {
+                        width: percent(435, $base: 646);
+                        position: absolute;
+                        bottom: -60px;
+                        right: -30px;
+                    }
+                }
+                &.bikes
+                {
+                    padding: 0 19px 0 42px;
+                    grid-column: span 2;
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 13px;
+                    .info
+                    {
+                        flex: 0 1 603px;
+                        padding: 42px 0 48px;
+                        h4 { margin: 14px 0 29px; }
+                    }
+                    .pict
+                    {
+                        flex: 0 1 630px;
+                        position: relative;
+                        > .inner
+                        {
+                            width: 100%;
+                            position: absolute;
+                            top: 2px;
+                            left: 0;
+                            bottom: -52px;
+                            display: flex;
+                            > div
+                            {
+                                display: flex;
+                                align-items: center;
+                                &.L { flex: 1 1 percent(312, $base: 630); }
+                                &.R
+                                {
+                                    flex: 1 1 percent(341, $base: 630);
+                                    margin-left: percent(-23, $base: 630);
+                                }
+                                img
+                                {
+                                    width: 100%;
+                                    height: auto;
+                                }
+                            }
+                        }
+                    }
+                }
+                h3 {
+                    font-weight: 700;
+                    font-size: 32px;
+                    line-height: 37px;
+                }
+                h4 {
+                    font-weight: 500;
+                    font-size: 20px;
+                    line-height: 26px;
+                }
+                .pict, img { pointer-events: none; }
+            }
+            @media (max-width: 1200px)
+            {
+                row-gap: 32px;
+                > div.car .pict
+                {
+                    width: 59%;
+                    bottom: -9px;
+                    right: -35px;
+                }
+                > div.bikes .pict .inner
+                {
+                    top: 0;
+                    bottom: 0;
+                }
+            }
+        }
+        @media (max-width: $bp)
+        {
+            > .title
+            {
+                max-width: 240px;
+                margin: 30px auto 22px;
+                > h2 { font-size: 20px; }
+            }
+            .container-grid
+            {
+                display: block;
+                > div
+                {
+                    padding: 20px 20px 22px 26px !important;
+                    & + div { margin-top: 36px; }
+                    &.car
+                    {
+                        min-height: 0;
+                        &.L
+                        {
+                            .info h4 { max-width: 202px; }
+                            .pict { width: percent(191, $base: 352); }
+                        }
+                        &.R
+                        {
+                            .info h4 { max-width: 202px; }
+                            .pict { width: percent(175, $base: 352); }
+                        }
+                        .info
+                        {
+                            height: auto;
+                            padding: 0;
+                            display: block;
+                        }
+                        .pict
+                        {
+                            right: 0;
+                            bottom: -16px;
+                        }
+                    }
+                    &.bikes
+                    {
+                        display: block;
+                        .info
+                        {
+                            padding: 0;
+                            h4
+                            {
+                                max-width: 176px;
+                                margin-bottom: 15px !important;
+                            }
+                        }
+                        .pict
+                        {
+                            width: percent(160, $base: 352);
+                            position: absolute;
+                            right: 13px;
+                            bottom: -19px;
+                            > .inner
+                            {
+                                position: static;
+                                display: block;
+                                > div
+                                {
+                                    display: block;
+                                    &.L { display: none; }
+                                    &.R { margin-left: 0; }
+                                }
+                            }
+                        }
+                    }
+                    h3 {
+                        font-size: 18px;
+                        line-height: 20px;
+                    }
+                    h4 {
+                        font-size: 12px;
+                        line-height: normal;
+                        margin: 8px 0 22px !important;
+                    }
+                }
+            }
+        }
+    }
+
+    #benefits > .container
+    {
+        background-color: #f4fffb;
+        padding: 52px 80px 62px;
+        margin-top: 94px;
+        .head-title
+        {
+            max-width: 728px;
+            font-weight: 700;
+            font-size: 35px;
+            line-height: normal;
+            text-align: center;
+            margin: 0 auto 40px;
+        }
+        @media (max-width: $bp)
+        {
+            padding: 43px 22px;
+            margin-top: 57px;
+            .head-title
+            {
+                max-width: 308px;
+                font-size: 20px;
+                margin: 0 auto 37px;
+            }
+        }
+    }
+
+    #renting { margin-top: 54px; }
+    #ocasion { margin-top: 78px; }
+    #motos
+    {
+        background-color: #F7F8FA;
+        padding: 65px 0 51px;
+        margin-top: 83px;
+
+        .c-banner > .inner,
+        .c-logos .logos-slide .card-logo {
+            background-color: white;
+        }
+    }
+
+    .c-hr { display: none; }
+
+    #legal
+    {
+        font-size: 14px;
+        line-height: 20px;
+        padding: 48px 74px 34px;
+        a
+        {
+            color: #133599;
+            font-weight: 600;
+            text-decoration: underline;
+        }
+        @media (max-width: $bp)
+        {
+            font-size: 11px;
+            line-height: normal;
+            padding: 34px 14px 52px;
+        }
+    }
+
+    @media (max-width: $bp)
+    {
+        #slider { margin-top: 0; }
+
+        #renting { margin-top: 58px; }
+        #ocasion { margin-top: 42px; }
+        #motos
+        {
+            padding: 38px 0;
+            margin-top: 38px;
+        }
+
+        .c-hr
+        {
+            margin: 32px 0 42px;
+            display: block;
+            div
+            {
+                height: 1px;
+                background-color: #D9DBE4;
+            }
+        }
+    }
+}
